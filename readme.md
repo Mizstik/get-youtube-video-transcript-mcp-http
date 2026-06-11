@@ -9,6 +9,10 @@ git clone https://github.com/Mizstik/get-youtube-video-transcript-mcp-http.git
 cd get-youtube-video-transcript-mcp-http
 npm install
 ```
+You will also need ffmpeg which is used to convert the subtitles into a format that uses fewer tokens and deduplicate the lines.
+```
+winget install ffmpeg
+```
 
 # Start the server
 ```
