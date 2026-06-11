@@ -98,7 +98,7 @@ server.registerTool(
 
 async function fetch_comments(video_id, sortby="top", max_comments=50) {
   const command = `"${ytDlpPath}" --skip-download --write-comments --dump-json --extractor-args "youtube:comment_sort=${sortby};max_comments=${max_comments}" "${video_id}"`
-  const { stdout } = await execAsync(command)
+  const { stdout } = await execAsync(command, { maxBuffer: 10 * 1024 * 1024 }) // 10 MB
   let jsondump = JSON.parse(stdout.trim())
   let commentBlock = jsondump.comments
   let commentParsed = ""
