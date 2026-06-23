@@ -1,5 +1,7 @@
 # get-youtube-video-transcript-mcp
 
+Note: This repo is deprecated as the streamable http functionality has been merged into the [original repo](https://github.com/Mizstik/get-youtube-video-transcript-mcp) that can now operate both in stdio mode and in http streamable mode.
+
 This is the HTTP Streamable version of my youtube transcript MCP server which grabs transcripts/subtitles as well as the title from YouTube videos using yt-dlp. This can be easier than stdio to deploy and connect when it comes to some frontends such as OpenWebUI or the dockerized version of Odysseus.
 
 # Installation
